@@ -1,21 +1,48 @@
-## Evaluation CT by #CTDesarrallo #Funiber
+# Nombre del Proyecto
 
-Welcome candidate to our technical skills assessment project.
+ct-candidates-app
 
-Carefully review the questions provided by your evaluator then try to solve them with this project and show us your best skills
+## Requisitos
 
-I wish you good luck
+- PHP >= 8.3
+- Composer
+- Node.js y npm
+- MySQL o cualquier otro sistema de gestión de bases de datos compatible
+- Xampp
 
-## About Laravel
+## Configuración del Entorno
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. **Clonar el Repositorio:**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+   ```bash
+   git clone https://github.com/pspaulus/ct-candidates-app
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+
+
+2. **Install PHP Dependencies:**
+
+    ```bash
+    composer install
+    ```
+
+3. **Copy Configuration File:**
+
+    ```bash
+    cp .env.example .env
+    ```
+
+    Edit the `.env` file with your database configuration and other settings.
+
+4. **Run Migrations and Seed Data:**
+
+    ```bash
+    php artisan migrate --seed
+    ```
+
+5. **Run Project:**
+
+    ```bash
+    php artisan serve
+    ```
+
+![Alt text](image.png)
