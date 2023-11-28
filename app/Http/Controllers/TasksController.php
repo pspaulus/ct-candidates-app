@@ -16,19 +16,19 @@ class TasksController extends Controller
     {
         // Filtrar por estado completado o no
         $completed = $request->get('completed');
-        $task = Tasks::when($completed !== null, function ($query) use ($completed) {
+        $tasks = Tasks::when($completed !== null, function ($query) use ($completed) {
             return $query->where('is_completed', $completed);
         });
 
         // Ordenar por campo específico (por defecto, por id de forma descendente)
         $sortField = $request->get('sort_field', 'id');
         $sortOrder = $request->get('sort_order', 'desc');
-        $task->orderBy($sortField, $sortOrder);
+        $tasks->orderBy($sortField, $sortOrder);
 
         // Obtener las tareas
-        $task = Tasks::all();
+        $tasks = Tasks::all();
 
-        return response()->json($task, 200);
+        return response()->json($tasks, 200);
     }
 
 
@@ -73,7 +73,7 @@ class TasksController extends Controller
 
 
 
-    public function edit(Tasks $task)
+    public function edit(Tasks $tasks)
     {
         //
     }

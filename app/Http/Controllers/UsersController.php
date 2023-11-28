@@ -46,11 +46,13 @@ class UsersController extends Controller
     
     public function logout()
     {
-        auth ()->user ()->tokens ()->delete ();
-        return [
-            'message' => 'Logged out'
-        ];
+        auth()->user()->tokens->each(function ($token, $key) {
+            $token->delete();
+        });
+    
+        return response()->json(['status' => 1, 'msg' => 'Tokens deleted successfully'], 200);
     }
+    
 
     public function register(Request $request)
     {
