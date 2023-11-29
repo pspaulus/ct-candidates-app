@@ -40,6 +40,7 @@ class TasksController extends Controller
 
         $request->validate([
             'name' => 'required|string|max:255',
+            'order' => 'required|string',
             'status' => 'required|in:pending,completed',
         ]);
 
@@ -47,6 +48,7 @@ class TasksController extends Controller
         $task = Tasks::create([
             'name' => $request->input('name'),
             'status' => $request->input('status'),
+            'order' => $request->input('order'),
             'active' => true,
         ]);
 

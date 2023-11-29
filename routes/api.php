@@ -20,17 +20,16 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/tasks', [TasksController::class, 'index']);
+Route::post('/tasks', [TasksController::class, 'create']);
+Route::put('/tasks/{id}', [TasksController::class, 'update']);
+Route::delete('/tasks/{id}', [TasksController::class, 'destroy']);
+Route::get('/tasks/{id}', [TasksController::class, 'show']);
 
+Route :: get ('/users', [UsersController::class, 'users']);
+Route :: post ('/login', [UsersController::class, 'login']);
+Route :: post ('/register', [UsersController::class, 'register']);
 
-Route::get('/users', [UsersController::class, 'users']);
-Route::post('/login', [UsersController::class, 'login']);
-Route::post('/register', [UsersController::class, 'register']);
-
-Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/logout', [UsersController::class, 'logout']);
-    Route::get('/tasks', [TasksController::class, 'index']);
-    Route::post('/tasks', [TasksController::class, 'create']);
-    Route::put('/tasks/{id}', [TasksController::class, 'update']);
-    Route::delete('/tasks/{id}', [TasksController::class, 'destroy']);
-    Route::get('/tasks/{id}', [TasksController::class, 'show']);
+Route :: middleware ('auth:sanctum')->group(function (){
+    Route :: get ('/logout', [UsersController::class, 'logout']);
 });
