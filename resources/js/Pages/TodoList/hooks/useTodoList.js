@@ -53,7 +53,6 @@ const useTodoList = ({ list }) => {
             .slice()
             .sort((a, b) => a.title.localeCompare(b.title));
         setLisTask(listSortAsc);
-        // console.log(ascendente);
     };
 
     const sortDesc = () => {
