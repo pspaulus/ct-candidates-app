@@ -1,21 +1,47 @@
-## Evaluation CT by #CTDesarrallo #Funiber
+# Todo List App
 
-Welcome candidate to our technical skills assessment project.
+## Prerequisites
 
-Carefully review the questions provided by your evaluator then try to solve them with this project and show us your best skills
+Make sure you have the following prerequisites installed before getting started:
 
-I wish you good luck
+- [PHP](https://www.php.net/) >= 8.2
+- [Composer](https://getcomposer.org/)
+- [Node.js](https://nodejs.org/) and [npm](https://www.npmjs.com/)
+- [MySQL](https://www.mysql.com/)
+- [XAMPP](https://www.apachefriends.org/)
 
-## About Laravel
+## Steps to Start the Application
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. **Clone the Repository:**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+   ```bash
+   git clone https://github.com/pspaulus/ct-candidates-app
+    ```
+2. **Configure the .env File:**
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+    Copy the .env.example file to a new file named .env.
+    ```bash
+   cp .env.example .env
+   ```
+
+3. **Generate Keys for the .env File:**
+    ```bash
+   php artisan key:generate
+   ```
+4. **Run Migrations:**
+    ```bash
+   php artisan migrate
+   ```
+5. **Start the Artisan Server:**
+    ```bash
+   php artisan serve
+   ```
+6. **Compile NPM Resources:**
+    ```bash
+    npm install
+    npm run dev
+   ```
+
+7. **Open the Application:**
+
+   Open your web browser and visit http://localhost:8000
