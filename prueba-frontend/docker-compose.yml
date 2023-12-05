@@ -24,3 +24,4 @@ services:
 networks:
   shared-funiber:
     external: true
+
