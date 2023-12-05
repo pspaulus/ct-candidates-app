@@ -10,4 +10,5 @@ RUN npm ci
 FROM dependency-base AS production-base 
 # build will also take care of building # if necessary 
 COPY . . 
-RUN npm run build 
+RUN npm run build
+
