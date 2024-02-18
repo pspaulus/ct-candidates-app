@@ -1,0 +1,1 @@
+import{D as o}from"./app-94306334.js";class a{constructor(t=null){const e=this.getHeaders({token:t});this.http=o.create({baseURL:"http://127.0.0.1:8000/api/",headers:e})}getHeaders(t){const e={Accept:"application/json","content-type":"application/json"};return t&&t.token&&(e.Authorization=`Bearer ${t.token}`),e}}export{a as A};
