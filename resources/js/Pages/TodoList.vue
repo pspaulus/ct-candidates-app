@@ -105,6 +105,9 @@ watch(newTask, value => {
         </div>
         <div class="flex items-center justify-center h-full" v-else>
             <div class="card p-6 w-full max-w-md">
+                <div class="flex mb-4 items-center justify-center">
+                    <h2 class="font-semibold text-xl text-gray-800 leading-tight">Pending tasks</h2>
+                </div>
                 <div class="flex mb-4">
                     <input type="text" v-model="filter" placeholder="Search task..."
                         class="flex-1 px-4 py-2 border rounded-md mr-2" />
@@ -140,7 +143,7 @@ watch(newTask, value => {
             </div>
 
 
-            <div class="card p-6 w-full max-w-md">
+            <div class="card p-6 w-full max-w-md" v-if="taskExist">
                 <div class="flex mb-4 items-center justify-center">
                     <h2 class="font-semibold text-xl text-gray-800 leading-tight">Completed tasks</h2>
                 </div>
