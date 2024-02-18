@@ -39,7 +39,7 @@ const closeSesion = () => {
                                     Home
                                 </NavLink>
                                 <NavLink :href="route('todo-list')" :active="route().current('todo-list')">
-                                    TodoList
+                                    TaskList
                                 </NavLink>
                             </div>
                         </div>
