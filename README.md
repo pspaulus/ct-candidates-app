@@ -1,21 +1,25 @@
 ## Evaluation CT by #CTDesarrallo #Funiber
 
-Welcome candidate to our technical skills assessment project.
-
-Carefully review the questions provided by your evaluator then try to solve them with this project and show us your best skills
-
-I wish you good luck
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* Download the files from the repository
+```
+$ git clone https://github.com/nicoVillamar-dev/ct-candidates-app
+```
+* Run Laravel and Vue dependency installations
+```
+$ composer install
+$ npm install
+```
+* Make sure you set your environment variables in the .env file according .env.template
+* Verify that you are in the project path and run the migrations to create the respective tables.
+```
+$ php artisan migrate
+```
+* Run wamp and node servers
+```
+$ npm run build
+$ php artisan serve
+```
+* Open the application in the web browser
+```
+$ http://127.0.0.1:8000/login
+```
