@@ -1,0 +1,26 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5; /* Color de fondo opcional */
+  }
+  
+  .login-card {
+    max-width: 400px;
+    width: 100%;
+    margin: 15px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,38 @@
+
+<app-navbar></app-navbar>
+<div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex justify-content-center">
+            <div class="col-md-12">
+                <div class="card px-3">
+                    <div class="card-body">
+                        <h4 class="card-title">Awesome Todo list</h4>
+                        <div class="add-items d-flex"> 
+                            <input type="text" 
+                                class="form-control todo-list-input" 
+                                placeholder="What do you need to do today?" 
+                                [(ngModel)]="taskTitle"
+                                (keyup.enter)="SearchTitle()"> 
+                            <button class="add btn btn-primary font-weight-bold todo-list-add-btn" (click)="SearchTitle()">Search</button> 
+                            <button routerLink="/tasksRegister" class="add btn btn-primary font-weight-bold todo-list-add-btn">Add</button> 
+                        </div>
+                        <div class="list-wrapper">
+                            
+                            <mat-list cdkDropList (cdkDropListDropped)="drop($event)">
+                                <mat-list-item *ngFor="let task of tasks; let i = index" cdkDrag>
+                                  <input class="checkbox" (click)="updateCompletedTask(task)" type="checkbox" [(ngModel)]="task.completed">
+                                  <span class="task-text" [ngClass]="{'completed-task': task.completed}">{{ task.title }}</span>
+                                  <button mat-icon-button color="warn" (click)="deleteTask(task)">
+                                    <mat-icon>delete</mat-icon>
+                                  </button>
+                                  <div *cdkDragPlaceholder></div>
+                                </mat-list-item>
+                              </mat-list>
+                              
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

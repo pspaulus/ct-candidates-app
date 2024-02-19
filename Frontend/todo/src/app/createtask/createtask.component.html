@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="form-container">
+    <form [formGroup]="taskForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Título</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <mat-label>Orden</mat-label>
+        <input matInput formControlName="order" type="number">
+      </mat-form-field>
+  
+      <!-- <mat-checkbox formControlName="completed" class="completed-checkbox">Completada</mat-checkbox> -->
+
+      <div class="button-container">
+        <button mat-button color="primary" type="submit" (click)="saveAndExit()">Guardar y Salir</button>
+        <button mat-button color="accent" type="button" (click)="saveAndNew()">Guardar y Nuevo</button>
+      </div>
+    </form>
+  </div>

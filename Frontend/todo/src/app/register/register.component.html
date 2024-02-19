@@ -1,0 +1,39 @@
+<div class="register-container">
+    <mat-card class="register-card">
+      <mat-card-header>
+        <mat-card-title>Registro</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form (ngSubmit)="onRegister()">
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Nombre</mat-label>
+            <input matInput [(ngModel)]="name" name="name" required autocomplete="name">
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Email</mat-label>
+            <input matInput [(ngModel)]="email" name="email" type="email" required autocomplete="email">
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Contraseña</mat-label>
+            <input matInput [(ngModel)]="password" name="password" type="password" required autocomplete="new-password">
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Confirmación de Contraseña</mat-label>
+            <input matInput [(ngModel)]="passwordConfirmation" name="passwordConfirmation" type="password" required autocomplete="new-password">
+          </mat-form-field>
+  
+          <div class="button-container">
+            <button mat-raised-button color="primary" type="submit" class="full-width">Registrar</button>
+          </div>
+        </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <p class="text-center">
+          ¿Ya tienes una cuenta? <a routerLink="/login">Iniciar sesión</a>
+        </p>
+      </mat-card-actions>
+    </mat-card>
+  </div>

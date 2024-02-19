@@ -1,0 +1,38 @@
+/* Centrar todo el formulario en la pantalla */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f5f5f5; /* Color de fondo ligero */
+  }
+  
+  /* Estilo del formulario */
+  form {
+    max-width: 600px;
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+  .completed-checkbox .mat-checkbox-label {
+    color: black !important; /* Asegura que el color tenga prioridad */
+  }
+  /* Estilos para los campos de entrada y el checkbox */
+  mat-form-field, mat-checkbox {
+    width: 100%; /* Asegúrate de que ocupen todo el ancho */
+    margin-bottom: 16px; /* Espaciado entre campos */
+  }
+  
+  /* Estilos para los botones */
+  .button-container {
+    display: flex;
+    justify-content: space-between; /* Espacia los botones uniformemente */
+    margin-top: 20px;
+  }
+  
+  button {
+    min-width: 120px; /* Ancho mínimo para los botones */
+  }
