@@ -3,6 +3,7 @@
 namespace App\Exceptions;
 
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use Illuminate\Http\Response;
 use Throwable;
 
 class Handler extends ExceptionHandler
@@ -26,5 +27,26 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+    }
+
+    public function render($request, Throwable $exception)
+    {
+        /** ERROR EN FORMATO VISUAL (html) --> por defecto */
+        // return parent::render($request, $exception);
+
+        /** ERROR EN FORMATO JSON */
+        if ($exception instanceof GenericException) {
+            return response()->json([
+                'success' => false,
+                'message' => empty( $exception->getMessage()) ? $exception->getTrace(): $exception->getMessage(),
+                'errorCode' => spl_object_hash($exception)
+            ], $exception->getStatus());
+        }
+
+        return response()->json([
+            'success' => false,
+            'message' => empty( $exception->getMessage()) ? $exception->getTrace(): $exception->getMessage(),
+            'errorCode' => spl_object_hash($exception)
+        ], Response::HTTP_INTERNAL_SERVER_ERROR);
     }
 }
