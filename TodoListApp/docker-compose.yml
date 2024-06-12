@@ -1,0 +1,53 @@
+version: "3"
+services:
+  app:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: funiber-todo-list-app-api
+    container_name: nombre-de-tu-contenedor-backend
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    working_dir: /var/www
+    volumes:
+      - ./backend:/var/www
+      - ./backend/vendor
+    networks:
+      - app-network
+
+  node:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: funiber-todo-list-client
+    container_name: nombre-de-tu-contenedor-frontend
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - app-network
+
+  db:
+    image: postgres:latest
+    container_name: funiber-todo-list-db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: tu-usuario-postgres
+      POSTGRES_PASSWORD: tu-contraseña-postgres
+      POSTGRES_DB: tu-base-de-datos-postgres
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

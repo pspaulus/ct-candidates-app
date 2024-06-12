@@ -1,35 +1,78 @@
-# Laravel Breeze API + React
+# Laravel API + React
 
-This repository is a web application built using Vite, React, TypeScript, Tailwind CSS, and React Router.
+Este proyecto es un ejemplo de una aplicación de lista de tareas (Todo List) que utiliza Laravel para el backend y React para el frontend. La aplicación permite a los usuarios registrarse, iniciar sesión, ver, agregar, editar y eliminar tareas.
 
-<img width="100%" alt="Screenshot" src="https://github.com/justnixx/laravel-breeze-api-react/assets/45858998/37042cc2-3680-4443-b668-223f5abbe3af">
+<img width="100%" alt="Screenshot" src="https://i.postimg.cc/0jQNrX4S/Captura-de-pantalla-2024-06-11-202419.png">
 
-# Getting Started
+# Instrucciones
 
-To get started with the project, follow these steps:
+Para ejecutar la aplicación, siga los pasos a continuación:
 
-1. Clone the repository: `git clone git@github.com:justnixx/laravel-breeze-api-react.git`
-2. Install the necessary dependencies for both frontend and backend.
+1. Clone el repositorio en su máquina local.
 
-# Description
+```bash
+git clone https://github.com/christianldev/ct-candidates-app.git
+```
 
-The repository is structured into two main directories:
+2. Navegue a la carpeta del proyecto.
 
-1. **Backend**: This directory contains the code for the backend of the application. It provides the necessary APIs and handles server-side logic using Laravel Breeze.
+```bash
+cd ct-candidates-app
+```
 
-2. **Frontend**: This directory contains the code for the frontend of the application. It connects to the Laravel Breeze API backend and handles the user interface using React, TypeScript, Tailwind CSS, and React Router.
+3. Instale las dependencias del backend.
 
-Please refer to the respective directories for detailed instructions and additional information on each component.
+```bash
+cd backend
+composer install
+```
 
-# Features
+4. Copie el archivo de configuración de ejemplo y configure su base de datos.
 
-- Vite: The frontend uses Vite as the build tool, providing fast and efficient development experience.
-- React: The frontend is built using React, a popular JavaScript library for building user interfaces.
-- TypeScript: The project utilizes TypeScript, a typed superset of JavaScript, for enhanced developer productivity and code quality.
-- Tailwind CSS: The frontend styling is done using Tailwind CSS, a utility-first CSS framework.
-- React Router: The frontend uses React Router for declarative routing, enabling navigation and multiple views in the application.
-- Laravel Breeze: The backend API is built using Laravel Breeze, a lightweight authentication scaffold for Laravel applications.
+```bash
+cp .env.example .env
+```
 
-# Demo
+5. Genere una clave de aplicación.
 
-👉 [https://breeze.nixx.dev/login](https://breeze.nixx.dev/login)
+```bash
+php artisan key:generate
+```
+
+6. Ejecute las migraciones.
+
+```bash
+php artisan migrate
+```
+
+7. Instale las dependencias del frontend.
+
+```bash
+cd ../frontend
+npm install
+```
+
+8. Inicie el servidor de desarrollo.
+
+```bash
+npm run dev
+```
+
+9. Abra su navegador y visite `http://localhost:3000` para ver la aplicación.
+
+# Descripción
+
+El proyecto consta de dos directorios principales:
+
+1. **Backend**: Este directorio contiene el código para el backend de la aplicación. Utiliza Laravel para proporcionar una API RESTful que maneja las operaciones CRUD para las tareas y la autenticación de los usuarios.
+
+2. **Frontend**: Este directorio contiene el código para el frontend de la aplicación. Utiliza React para proporcionar una interfaz de usuario interactiva que permite a los usuarios registrarse, iniciar sesión, ver, agregar, editar y eliminar tareas.
+
+# Características
+
+- Vite: La aplicación frontend está configurada con Vite, un entorno de desarrollo rápido para aplicaciones web modernas.
+- React: La aplicación frontend está construida con React, una biblioteca de JavaScript para crear interfaces de usuario interactivas.
+- TypeScript: El frontend está escrito en TypeScript, un superconjunto de JavaScript que agrega tipos estáticos opcionales a la sintaxis de JavaScript.
+- Tailwind CSS: El frontend utiliza Tailwind CSS, un marco de diseño utilitario de bajo nivel para crear diseños personalizados rápidamente.
+- React Router: La aplicación frontend utiliza React Router, una biblioteca de enrutamiento para React que mantiene sincronizada la URL con la interfaz de usuario.
+- Laravel: El backend de la aplicación está construido con Laravel, un popular marco de aplicación web de PHP que sigue el patrón de arquitectura MVC.
