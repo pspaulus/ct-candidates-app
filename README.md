@@ -1,21 +1,52 @@
 ## Evaluation CT by #CTDesarrallo #Funiber
 
-Welcome candidate to our technical skills assessment project.
+### 1 - El lago musical
+* Excute command
+```
+node .\El_lago_musical.js
+```
+Note: Make sure nodejs is installed
 
-Carefully review the questions provided by your evaluator then try to solve them with this project and show us your best skills
+### 2 - To do list
 
-I wish you good luck
+* Download the files from the repository (front with react)
+```
+git clone https://github.com/HumbertoGS/to_do_list.git
+```
+* Install dependencies
+```
+npm install
+```
+* run the app with command
+```
+npm start
+```
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+* Download the files from the repository
+```
+git clone https://github.com/HumbertoGS/ct-candidates-app.git
+```
+* Change branch to the next
+```
+git checkout feature/humberto-guiracocha-task-list
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+* Install dependencies Laravel
+```
+composer install
+```
+* Execute the command to perform the migration
+```
+php artisan migrate
+```
+* Execute the command to run the server
+```
+php artisan serve
+```
+* Open the application in the web browser
+```
+http://127.0.0.1:8000
+```
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Note: In case the server does not run on port 8000, make the change the port in the .env file of the react application.
