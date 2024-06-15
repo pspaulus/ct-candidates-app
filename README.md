@@ -1,21 +1,9 @@
-## Evaluation CT by #CTDesarrallo #Funiber
+## Prueba Tecnica Allan Baque Jacome
 
-Welcome candidate to our technical skills assessment project.
+En esta prueba tecnica se vieron varios puntos, entre ellos la comunicacion del backend con el front, localstorage para almacenar tokens, token CSRF, CORS.
 
-Carefully review the questions provided by your evaluator then try to solve them with this project and show us your best skills
-
-I wish you good luck
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   Asegurese de que en el .env esten los datos correctos hacia la base de datos.
+-   Para ejecutar el codigo primero realice las migraciones con _**php artisan migrate**_
+-   Despues debera instalar las dependencias necesarias con _**composer i**_ y _**npm i**_
+-   De ser necesario configure la baseUrl de axios, esta en js/axios/axios.js
+-   Inicie el servidor con _**php artisan serve**_ y el front con _**npm run dev**_
