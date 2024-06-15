@@ -54,7 +54,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['stdout'],
+            'channels' => ['daily'],
             'ignore_exceptions' => false,
         ],
 
