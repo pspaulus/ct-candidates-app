@@ -1,5 +1,12 @@
 ## Evaluation CT by #CTDesarrallo #Funiber
 
+### Test Backend 1 - El lago musical
+
+1) cd Test Backend 1 - El lago musical
+2) php -S localhost:9001
+
+
+
 ### BACKEND - Laravel
 
 ![image](https://github.com/rgmatute/ct-candidates-app/assets/39324527/1c8a3cae-9ef3-47c1-8ee6-fadaf95897e2)
