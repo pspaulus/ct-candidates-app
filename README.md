@@ -1,21 +1,63 @@
 ## Evaluation CT by #CTDesarrallo #Funiber
 
-Welcome candidate to our technical skills assessment project.
+### Test Backend 1 - El lago musical
 
-Carefully review the questions provided by your evaluator then try to solve them with this project and show us your best skills
+1) cd Test Backend 1 - El lago musical
+2) php -S localhost:9001
 
-I wish you good luck
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### BACKEND - Laravel
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![image](https://github.com/rgmatute/ct-candidates-app/assets/39324527/1c8a3cae-9ef3-47c1-8ee6-fadaf95897e2)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### tasks
+![image](https://github.com/rgmatute/ct-candidates-app/assets/39324527/ad0ef9e3-f4a3-4a8d-aa96-8e604167f5df)
+
+
+
+cd ct-candidates-app
+
+#### develop
+
+1) composer install
+2) php artisan migrate
+3) php artisan serve
+
+
+
+### FRONT-END - Vue + Vuetify
+
+
+
+#### LOGIN - http://localhost:3000
+![funiber-tasks-login](https://github.com/rgmatute/ct-candidates-app/assets/39324527/f6d4b013-21e9-4202-a8c4-37429abe9ea3)
+
+
+#### REGISTER - http://localhost:3000/register
+![funiber-tasks-register](https://github.com/rgmatute/ct-candidates-app/assets/39324527/d94c6fa1-d123-453e-a13a-497115a731c3)
+
+
+#### TASKS - http://localhost:3000/tasks
+![funiber-tasks-items](https://github.com/rgmatute/ct-candidates-app/assets/39324527/75e45202-1140-4115-b95d-6eabc1e27c39)
+
+
+
+
+
+cd tasks-webapp
+
+
+#### develop
+1) npm install
+2) npm run dev
+
+
+
+#### production
+1) npm install
+2) npm run build
+3) php -S localhost:3000
+
+
+
